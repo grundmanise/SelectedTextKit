@@ -6,10 +6,11 @@
 //
 
 import Foundation
-import os.log
+import os
 
 private let logger = Logger(
-    subsystem: "com.izual.SelectedTextKit", category: "main")
+    subsystem: Bundle.main.bundleIdentifier!, category: "selected-text-kit"
+)
 
 /// Shared date formatter for timestamps
 private let sharedDateFormatter = DateFormatter()
@@ -28,10 +29,10 @@ public var logTimestamp: String {
 
 /// Log info message with timestamp
 public func logInfo(_ message: String) {
-    logger.info("[\(logTimestamp)] \(message)")
+    logger.info("\(message)")
 }
 
 /// Log error message with timestamp
 public func logError(_ message: String) {
-    logger.error("[\(logTimestamp)] \(message)")
+    logger.error("\(message)")
 }
