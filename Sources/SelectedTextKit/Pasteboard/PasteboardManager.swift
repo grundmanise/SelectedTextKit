@@ -12,7 +12,6 @@ import KeySender
 /// Manager class for pasteboard-related operations
 @objc(STKPasteboardManager)
 public final class PasteboardManager: NSObject {
-
     @objc
     public static let shared = PasteboardManager()
 
@@ -202,7 +201,7 @@ public final class PasteboardManager: NSObject {
     public func pollTask(
         _ task: @escaping () async -> Bool,
         every interval: TimeInterval = 0.005,
-        timeout: TimeInterval = 0.1
+        timeout: TimeInterval = 0.2
     ) async -> Bool {
         let startTime = Date()
         while Date().timeIntervalSince(startTime) < timeout {
@@ -214,7 +213,6 @@ public final class PasteboardManager: NSObject {
         logInfo("pollTask timeout")
         return false
     }
-
 }
 
 // MARK: - String + Pasteboard
