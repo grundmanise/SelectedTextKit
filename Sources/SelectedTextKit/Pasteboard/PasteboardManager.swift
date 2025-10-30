@@ -57,8 +57,9 @@ public final class PasteboardManager: NSObject {
                 // Check if the pasteboard content has changed
                 if pasteboard.changeCount != initialChangeCount {
                     // !!!: The pasteboard content may be nil or other strange content(such as old content) if the pasteboard is changing by other applications in the same time, like PopClip.
-                    newContent = pasteboard.string
-                    if let newContent {
+                    let value = pasteboard.string
+                    if !value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                        newContent = value
                         logInfo("New Pasteboard content: \(newContent)")
                         return true
                     }
@@ -72,7 +73,8 @@ public final class PasteboardManager: NSObject {
 
         if restoreOriginal {
             await pasteboard.performTemporaryTask(
-                restoreInterval: restoreInterval, task: executeAction)
+                restoreInterval: restoreInterval, task: executeAction
+            )
         } else {
             await executeAction()
         }
@@ -219,7 +221,7 @@ public final class PasteboardManager: NSObject {
 
 extension String {
     func copyToPasteboard() {
-        guard !self.isEmpty else {
+        guard !isEmpty else {
             return
         }
 
