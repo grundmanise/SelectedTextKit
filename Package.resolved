@@ -3,10 +3,10 @@
     {
       "identity" : "axswift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/clavierorg/AXSwift.git",
+      "location" : "https://github.com/tisfeng/AXSwift.git",
       "state" : {
-        "revision" : "191440838c70c9ceb4ccc6d81d310507b7bc8589",
-        "version" : "0.3.4"
+        "revision" : "2efa201fa18184de98674165592fd1ecb0c00a6d",
+        "version" : "0.3.6"
       }
     },
     {

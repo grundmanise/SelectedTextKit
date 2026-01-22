@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		038D38512CCBD5DA0009E22E /* SelectedTextKit in Frameworks */ = {isa = PBXBuildFile; productRef = 038D38502CCBD5DA0009E22E /* SelectedTextKit */; };
+		6DC5F2142F22D4E00014F87A /* AXSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6DC5F2132F22D4E00014F87A /* AXSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				038D38512CCBD5DA0009E22E /* SelectedTextKit in Frameworks */,
+				6DC5F2142F22D4E00014F87A /* AXSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +98,7 @@
 			name = SelectedTextKitExample;
 			packageProductDependencies = (
 				038D38502CCBD5DA0009E22E /* SelectedTextKit */,
+				6DC5F2132F22D4E00014F87A /* AXSwift */,
 			);
 			productName = SelectedTextKitExample;
 			productReference = 038D38122CCBD2A30009E22E /* SelectedTextKitExample.app */;
@@ -154,6 +157,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				038D384F2CCBD5DA0009E22E /* XCLocalSwiftPackageReference "../SelectedTextKit" */,
+				6DC5F2122F22D4E00014F87A /* XCRemoteSwiftPackageReference "AXSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 038D38132CCBD2A30009E22E /* Products */;
@@ -339,12 +343,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SelectedTextKitExample/SelectedTextKitExample.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SelectedTextKitExample/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -368,12 +373,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SelectedTextKitExample/SelectedTextKitExample.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SelectedTextKitExample/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -472,10 +478,26 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		6DC5F2122F22D4E00014F87A /* XCRemoteSwiftPackageReference "AXSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tisfeng/AXSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		038D38502CCBD5DA0009E22E /* SelectedTextKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SelectedTextKit;
+		};
+		6DC5F2132F22D4E00014F87A /* AXSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6DC5F2122F22D4E00014F87A /* XCRemoteSwiftPackageReference "AXSwift" */;
+			productName = AXSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
